@@ -80,6 +80,7 @@ extern "C" {
 #endif // CTL_APICALL
 
 ///////////////////////////////////////////////////////////////////////////////
+#define CTL_APIEXPORT
 #ifndef CTL_APIEXPORT
 #if defined(_WIN32)
 /// @brief Microsoft-specific dllexport storage-class attribute
@@ -90,6 +91,7 @@ extern "C" {
 #endif // CTL_APIEXPORT
 
 ///////////////////////////////////////////////////////////////////////////////
+#define CTL_DLLEXPORT
 #ifndef CTL_DLLEXPORT
 #if defined(_WIN32)
 /// @brief Microsoft-specific dllexport storage-class attribute

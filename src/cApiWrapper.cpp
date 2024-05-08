@@ -108,14 +108,7 @@ ctlInit(
     if (NULL == hinstLib)
     {
         std::vector<wchar_t> strDLLPath;
-        try
-        {
-            strDLLPath.resize(CTL_DLL_PATH_LEN);
-        }
-        catch (std::bad_alloc&)
-        {
-            return CTL_RESULT_ERROR_OUT_OF_DEVICE_MEMORY;
-        }
+        strDLLPath.resize(CTL_DLL_PATH_LEN);
 
         result = GetControlAPIDLLPath(pInitDesc, strDLLPath.data());
         if (result == CTL_RESULT_SUCCESS)
